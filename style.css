@@ -289,7 +289,9 @@ QTreeView {
 	border-radius: 4px;
 }
 QTreeView::item {
-	padding: 1px;
+	padding-left: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
 }
 QTreeView::indicator:checked {
 	image: url(icons/treecheckbox_checked.svg);
@@ -307,6 +309,9 @@ QTreeView#deckView::item, QTreeView#filterView::item{
 	color: white;
 }
 QTreeView::item:hover, DlgSettings QTreeView::item:hover, QTreeView#deckView::item:hover, QTreeView#filterView::item:hover {
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
    border: 1px solid #7bc5ea;
 	border-left: none;
    border-right: none;
@@ -323,7 +328,12 @@ QTreeView::item:has-children, QTreeView#deckView::item:has-children, QTreeView#f
 	color: black;
 }
 
-
+/* hover with border glitches everything out */
+TabDeckStorage QTreeView::item:has-children:hover, TabReplays QTreeView::item:has-children:hover {
+	border: 1px solid #7bc5ea;
+	border-left: none;
+   border-right: none;
+}
 
 QTreeView::branch:has-children:!has-siblings:closed,
 QTreeView::branch:closed:has-children:has-siblings {
@@ -342,11 +352,7 @@ TabDeckStorage QTreeView::item:has-children, TabReplays QTreeView::item:has-chil
 	border: 0;
 	color: white;
 }
-TabDeckStorage QTreeView::item:has-children:hover, TabReplays QTreeView::item:has-children:hover {
-	border: 1px solid #7bc5ea;
-	border-left: none;
-	border-right: none;
-}
+
 
 /* NOTE: Bg image */
 QTreeView#deckView {
