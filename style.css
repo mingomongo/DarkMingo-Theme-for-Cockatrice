@@ -10,12 +10,12 @@
 */
 
 /* TODO:
-BUGS
+BUGS:
+hover makes things out of alignment
 
-Tree headers out of alinment on servers.
-
-CLEANING
-
+CLEANING:
+Dock widget icons
+QLineEdit QToolButton for clear button
 List item hover style
 game set-up has buttons touching the top of the window
 medium color tone lighter?
@@ -26,11 +26,11 @@ Phase buttons
 Lighten up zones, make cockatrice style stackzone? less polka dots
 Menu and dock separators?
 Change maindeck arrow back?
+Notification icon change?
 Progress bar?
 Tabs taller?
 
-TESTING
-
+TESTING:
 Tabs still too short with other languages like chinese (?)
 Go through rest of icons
 Go through all windows
@@ -41,12 +41,11 @@ Try on Mac
 Name and screenshots
 */
 
-/* NOTE: Unchangeable/bugs
+/* NOTE: Unchangeable/known bugs
 ChatView alternating colors (QPalette)
 QTreeView has it's "has:children" items has locked font weight and font size (QFont)
 QHeaderView's single-side borders and :selected are broken, icons customisation is very limited (???)
 QComboBox dropdown border-radius, this might not be an option with this widget though (?)
-QDockWidget header icons can't be changed (can't do on stylesheet)
 Hyperlink colors (QPalette)
 Scaling the Cockatrice logo with the QTreeView (can't do on stylesheet)
 UserList has black text not white
@@ -60,6 +59,7 @@ Middle-click card info has a ugly QFrame style with sharp edges, cba to change i
 BUGS:
 * Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
 unless you change theme a lot
+* Headers in shortcut menu change when hovered
 */
 
 /* NOTE: Overall*/
@@ -76,6 +76,7 @@ QLabel {
 /* NOTE: I hate this thing */
 ChatView {
 	background-color: #fcfcfc;
+	border: 0;
 	color: black;
 }
 QTextEdit {
@@ -116,26 +117,29 @@ QGroupBox::title {
 	padding-left: 5px;
 	padding-top: 8px;
 }
-/* NOTE: Generic lists (Card Sources) */
+/* NOTE: Card Sources */
 QGroupBox > QListWidget {
-	alternate-background-color: #2C2D32;
-	background-color: #41444B;
+	alternate-background-color: #41444B;
+	background-color: #2C2D32;
 	border: 0;
 	border-radius: 2px;
 	color: white;
 }
+QGroupBox > QListWidget::item {
+	padding: 1px;
+}
 QGroupBox > QListWidget::item:hover {
    border: 1px solid #7bc5ea;
-	border-bottom: 1px solid #7bc5ea;
+	padding: 0;
 	border-left: none;
-	border-right: none;
-   border-top: 1px solid #7bc5ea;
+   border-right: none;
 }
 QGroupBox > QListWidget::item:selected {
 	background: #B8DEF2;
 	border-left: none;
    border-right: none;
 	color: black;
+	padding-left: 0;
 }
 /* NOTE: Setting icons container */
 DlgSettings > QListWidget {
@@ -169,6 +173,9 @@ QComboBox, QLineEdit, LineEditCompleter, .QTextEdit, QSpinBox {
 	border-radius: 2px;
 	color: white;
 	padding: 1px;
+}
+QLineEdit {
+	padding: 2px;
 }
 QLineEdit:read-only {
 	background-color: transparent;
@@ -222,11 +229,17 @@ QSpinBox::up-button:hover, QSpinBox::up-button:pressed, QSpinBox::down-button:ho
 /* NOTE: List headers */
 QHeaderView::section {
 	background-color: #7bc5ea;
-	border: 0;
+	border: solid;
 	color: black;
 	font-size: 13px;
 	font-weight: 500;
-	padding: 0 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	text-align: center;
+	height: 17px;
+	min-width: 60px;
 }
 QHeaderView::section:first {
 	border-top-left-radius: 3px;
@@ -239,6 +252,10 @@ QHeaderView::up-arrow {
 }
 QHeaderView::down-arrow {
 	image: url("icons/sortarrowdown.png");
+}
+/* rooms, replays and server lists */
+TabServer QHeaderView::section {
+	min-width: 80px;
 }
 
 /* NOTE: Section drag bars (headers) */
@@ -253,6 +270,12 @@ QDockWidget::title {
 	padding: 3px 0;
 	margin: 3px;
 }
+QDockWidget::close-button {
+
+}
+QDockWidget::float-button {
+
+}
 QDockWidget#playerListDock QTreeWidget::item:selected {
 	background-color: transparent;
 	color: white;
@@ -264,7 +287,6 @@ QTreeView {
 	background-color: #2C2D32;
 	border: 0;
 	border-radius: 4px;
-	font-weight: normal;
 }
 QTreeView::item {
 	padding: 1px;
@@ -284,10 +306,8 @@ QTreeView#deckView::item, QTreeView#filterView::item{
 	border-top: 1px solid #202225;
 	color: white;
 }
-QTreeView::item:hover, DlgSettings QTreeView::item:hover, QTreeView#deckView::item:hover {
+QTreeView::item:hover, DlgSettings QTreeView::item:hover, QTreeView#deckView::item:hover, QTreeView#filterView::item:hover {
    border: 1px solid #7bc5ea;
-	border-bottom: 1px solid #7bc5ea;
-   border-top: 1px solid #7bc5ea;
 	border-left: none;
    border-right: none;
 }
@@ -302,12 +322,9 @@ QTreeView::item:has-children, QTreeView#deckView::item:has-children, QTreeView#f
 	border-top: 1px solid #202225;
 	color: black;
 }
-/* NOTE: Remote deck storage */
-TabDeckStorage QTreeView::item:has-children, TabReplays QTreeView::item:has-children {
-	background-color: transparent;
-	border: none;
-	color: white;
-}
+
+
+
 QTreeView::branch:has-children:!has-siblings:closed,
 QTreeView::branch:closed:has-children:has-siblings {
 	border-image: none;
@@ -318,16 +335,34 @@ QTreeView::branch:open:has-children:has-siblings  {
 	border-image: none;
 	image: url(icons/branch_open.svg);
 }
-QTreeView#deckView, QTreeView#databaseView {
+
+/* NOTE: Remote deck storage */
+TabDeckStorage QTreeView::item:has-children, TabReplays QTreeView::item:has-children {
+	background-color: #2C2D32;
+	border: 0;
+	color: white;
+}
+TabDeckStorage QTreeView::item:has-children:hover, TabReplays QTreeView::item:has-children:hover {
+	border: 1px solid #7bc5ea;
+	border-left: none;
+	border-right: none;
+}
+
+/* NOTE: Bg image */
+QTreeView#deckView {
 	background-image: url(icons/cockatrice_logo.svg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-clip: padding;
 }
+
 UserList QTreeWidget {
 	alternate-background-color: #ebebeb;
 	background-color: #fcfcfc;
+}
+UserList QHeaderView:section {
+	min-width: 0;
 }
 
 /* NOTE: Tabs */
