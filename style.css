@@ -11,13 +11,12 @@
 
 /* TODO:
 CLEANING:
+Phase buttons
+WUBRG counters
 QLineEdit QToolButton for clear button?
 game set-up has buttons touching the top of the window
 medium color tone lighter?
 Header seperation?
-Phase buttons
-Lighten up zones, make cockatrice style stackzone?
-WUBRG counters
 Menu and dockwidget separator handles?
 
 TESTING:
@@ -211,9 +210,12 @@ QSpinBox {
 }
 QSpinBox::up-button {
 	image: url("icons/spin_up.svg");
+	height: 9px;
 }
 QSpinBox::down-button {
 	image: url("icons/spin_down.svg");
+	height: 9px;
+	margin-top: 1px;
 }
 QSpinBox::up-button:hover, QSpinBox::up-button:pressed, QSpinBox::down-button:hover, QSpinBox::down-button:pressed {
 	background-color: #53575f;
