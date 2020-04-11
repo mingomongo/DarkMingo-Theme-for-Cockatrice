@@ -10,25 +10,20 @@
 */
 
 /* TODO:
-BUGS:
-hover makes things out of alignment
-
 CLEANING:
-Dock widget icons
-QLineEdit QToolButton for clear button
-List item hover style
+QLineEdit QToolButton for clear button?
 game set-up has buttons touching the top of the window
 medium color tone lighter?
 Headers match scoll bar color
 Header seperation?
-QMenuBar different color?
 Phase buttons
 Lighten up zones, make cockatrice style stackzone? less polka dots
-Menu and dock separators?
+WUBRG counters
+Menu and dockwidget separator handles?
+invert buttons colors for Room tab?
 Change maindeck arrow back?
 Notification icon change?
 Progress bar?
-Tabs taller?
 
 TESTING:
 Tabs still too short with other languages like chinese (?)
@@ -49,11 +44,11 @@ QComboBox dropdown border-radius, this might not be an option with this widget t
 Hyperlink colors (QPalette)
 Scaling the Cockatrice logo with the QTreeView (can't do on stylesheet)
 UserList has black text not white
+Tab pane?
 Server online icon
 Any icon that isn't saved locally
 If two buttons are after the same file you can't make one of them have a different icon.
 The list of "settings" icon container height
-QLineEdit cross icon
 Middle-click card info has a ugly QFrame style with sharp edges, cba to change it
 
 BUGS:
@@ -183,6 +178,7 @@ QLineEdit:read-only {
 QLineEdit#hashLabel {
 	border-color: transparent;
 }
+
 QComboBox {
 	padding-left: 3px;
 }
@@ -263,18 +259,17 @@ QDockWidget {
 	color: #7bc5ea;
 	font-size: 15px;
 	font-weight: bold;
+	titlebar-close-icon: url("icons/dock_close.svg");
+   titlebar-normal-icon: url("icons/dock_float.svg");
+}
+QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+	background-color: #595D66;
+	border-radius: 3px;
 }
 QDockWidget::title {
-	/*border-bottom: 1px solid grey;*/
 	background-color: #202225;
-	padding: 3px 0;
 	margin: 3px;
-}
-QDockWidget::close-button {
-
-}
-QDockWidget::float-button {
-
+	padding: 3px 0;
 }
 QDockWidget#playerListDock QTreeWidget::item:selected {
 	background-color: transparent;
@@ -383,7 +378,7 @@ QTabBar::tab {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	min-height: 16px;
-	padding-bottom: 2px;
+	padding-bottom: 3px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -464,13 +459,16 @@ QMenu::item:selected {
 
 /* NOTE: Menu bar */
 QMenuBar {
-	background-color: #202225;
+	background-color: #2C2D32;
 	color: white;
 	font-size: 13px;
+	border-bottom: 1px solid #202225;
 }
 QMenuBar::item {
 	margin-right: 2px;
-   padding: 1px 4px;
+	padding-left: 4px;
+	padding-right: 3px;
+	padding-bottom: 2px;
 }
 QMenuBar::item:selected {
 	background-color: #41444B;
