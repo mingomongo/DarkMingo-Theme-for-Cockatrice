@@ -2,9 +2,9 @@
 	White: #fcfcfc
 	Alternate White: #ebebeb
 	"Black": #202225
-	Dark: #2C2D32
+	Dark grey: #2C2D32
 	Grey: #41444B
-	Hover: #53575f
+	Hover (varies): #53575f
 	Blue: #7bc5ea
 	Selection blue: #B8DEF2
 */
@@ -14,16 +14,12 @@ CLEANING:
 QLineEdit QToolButton for clear button?
 game set-up has buttons touching the top of the window
 medium color tone lighter?
-Headers match scoll bar color
 Header seperation?
 Phase buttons
 Lighten up zones, make cockatrice style stackzone? less polka dots
 WUBRG counters
 Menu and dockwidget separator handles?
-invert buttons colors for Room tab?
 Change maindeck arrow back?
-Notification icon change?
-Progress bar?
 
 TESTING:
 Tabs still too short with other languages like chinese (?)
@@ -33,7 +29,9 @@ Go through some languages
 Check at all windows and window sizes
 Go through code
 Try on Mac
+Progress bar?
 Name and screenshots
+...Sounds?
 */
 
 /* NOTE: Unchangeable/known bugs
@@ -253,6 +251,10 @@ QHeaderView::down-arrow {
 TabServer QHeaderView::section {
 	min-width: 80px;
 }
+/* Set list */
+WndSets QHeaderView::section {
+	min-width: 50px;
+}
 
 /* NOTE: Section drag bars (headers) */
 QDockWidget {
@@ -263,7 +265,7 @@ QDockWidget {
    titlebar-normal-icon: url("icons/dock_float.svg");
 }
 QDockWidget::close-button:hover, QDockWidget::float-button:hover {
-	background-color: #595D66;
+	background-color: #41444B;
 	border-radius: 3px;
 }
 QDockWidget::title {
@@ -476,7 +478,7 @@ QMenuBar::item:selected {
 
 /* NOTE: Scroll bar*/
 QScrollBar:vertical {
-	width: 8px;
+	width: 9px;
 }
 QScrollBar::add-page:vertical {
 	background: #2C2D32;
@@ -490,6 +492,14 @@ QScrollBar::handle:vertical {
 	background: #7bc5ea;
 	border-radius: 4px;
 	min-height: 30px;
+	width: 5px;
+	margin-left: 1px;
+}
+ChatView QScrollBar:vertical, UserList QScrollBar:vertical {
+	width: 8px;
+}
+ChatView QScrollBar::handle:vertical, UserList QScrollBar::handle:vertical  {
+	margin-left: 0;
 }
 QScrollBar:horizontal {
 	height: 8px;
@@ -544,14 +554,19 @@ QToolButton#filterDelOne, QToolButton#filterDelAll {
 	min-width: 80px;
 	padding: 2px;
 }
-SequenceEdit QPushButton, ShortcutSettingsPage QPushButton {
+SequenceEdit QPushButton, ShortcutSettingsPage QPushButton, GameSelector QPushButton {
 	background-color: #2C2D32;
 	color: white;
 	padding: 3px 5px;
 }
-SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled {
+SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled, GameSelector QPushButton:disabled {
 	background-color: #2C2D32;
 	color: grey;
+}
+SequenceEdit QPushButton:hover, ShortcutSettingsPage QPushButton:hover, GameSelector QPushButton:hover {
+	background-color: #41444B;
+	color: white;
+	padding: 3px 5px;
 }
 QToolButton:pressed, QToolButton:hover, QPushButton#ok:hover, QToolButton#filterDelOne:hover, QToolButton#filterDelAll:hover {
 	background-color: #41444B;
