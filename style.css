@@ -2,7 +2,7 @@
 	White: #fcfcfc
 	Alternate White: #ebebeb
 	"Black": #202225
-	Dark grey: #2C2D32
+	Dark Grey: #303239
 	Grey: #41444B
 	Hover (varies): #53575f
 	Blue: #7bc5ea
@@ -15,10 +15,8 @@ QMenu dropdown item spacing
 
 CLEANING:
 Phase buttons
-WUBRG counters
 QLineEdit QToolButton for clear button?
 game set-up has buttons touching the top of the window
-medium color tone lighter?
 Header seperation?
 Menu and dockwidget separator handles?
 
@@ -114,7 +112,7 @@ QGroupBox::title {
 /* NOTE: Card Sources */
 QGroupBox > QListWidget {
 	alternate-background-color: #41444B;
-	background-color: #2C2D32;
+	background-color: #303239;
 	border: 0;
 	border-radius: 2px;
 	color: white;
@@ -153,7 +151,7 @@ DlgSettings > QListWidget::item {
 	width: auto;
 }
 DlgSettings > QListWidget::item:selected {
-	background-color: #2C2D32;
+	background-color: #303239;
 }
 /* NOTE: Setting's content container */
 DlgSettings > QStackedWidget {
@@ -285,7 +283,7 @@ QDockWidget#playerListDock QTreeWidget::item:selected {
 /* NOTE: Card database and Deck builder */
 QTreeView {
 	alternate-background-color: #41444B;
-	background-color: #2C2D32;
+	background-color: #303239;
 	border: 0;
 	border-radius: 4px;
 }
@@ -349,7 +347,7 @@ QTreeView::branch:open:has-children:has-siblings  {
 
 /* NOTE: Remote deck storage */
 TabDeckStorage QTreeView::item:has-children, TabReplays QTreeView::item:has-children {
-	background-color: #2C2D32;
+	background-color: #303239;
 	border: 0;
 	color: white;
 }
@@ -394,7 +392,7 @@ QTabBar::tab:hover {
 QTabBar::tab:selected {
 	border: 1px solid #7bc5ea;
 	border-bottom: 0;
-	background-color: #2C2D32;
+	background-color: #303239;
 	margin-left: -3px;
 	margin-right: -3px;
 }
@@ -437,13 +435,13 @@ QWidget>QWidget>QTabWidget::tab-bar {
 	left: 0;
 }
 QWidget#tab1, QWidget#tab2, QWidget#tab3, QWidget#text {
-	background-color: #2C2D32;
+	background-color: #303239;
 	border-radius: 5px;
 	border-top-left-radius: 0;
 }
 /* NOTE: Tab Scrollers */
 QTabBar QToolButton {
-	background-color: #2C2D32;
+	background-color: #303239;
 	border-radius: 0px;
 	min-width: 0px;
 	padding: 0;
@@ -465,7 +463,7 @@ QMenu::item:selected {
 
 /* NOTE: Menu bar */
 QMenuBar {
-	background-color: #2C2D32;
+	background-color: #303239;
 	color: white;
 	font-size: 13px;
 	border-bottom: 1px solid #202225;
@@ -485,11 +483,11 @@ QScrollBar:vertical {
 	width: 9px;
 }
 QScrollBar::add-page:vertical {
-	background: #2C2D32;
+	background: #303239;
 	margin-top: -20px;
 }
 QScrollBar::sub-page:vertical {
-	background: #2C2D32;
+	background: #303239;
 	margin-bottom: -20px;
 }
 QScrollBar::handle:vertical {
@@ -509,11 +507,11 @@ QScrollBar:horizontal {
 	height: 8px;
 }
 QScrollBar::add-page:horizontal {
-	background: #2C2D32;
+	background: #303239;
 	margin-left: -20px;
 }
 QScrollBar::sub-page:horizontal {
-	background: #2C2D32;
+	background: #303239;
 	margin-right: -20px;
 }
 QScrollBar::handle:horizontal {
@@ -538,7 +536,7 @@ QPushButton {
 	padding-bottom: 4px;
 }
 QPushButton:disabled {
-	background-color: #2C2D32;
+	background-color: #303239;
 	color: grey;
 }
 /* NOTE: Deck editor buttons */
@@ -554,17 +552,17 @@ QToolButton:disabled {
 	color: grey;
 }
 QToolButton#filterDelOne, QToolButton#filterDelAll {
-	background-color: #2C2D32;
+	background-color: #303239;
 	min-width: 80px;
 	padding: 2px;
 }
 SequenceEdit QPushButton, ShortcutSettingsPage QPushButton, GameSelector QPushButton {
-	background-color: #2C2D32;
+	background-color: #303239;
 	color: white;
 	padding: 3px 5px;
 }
 SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled, GameSelector QPushButton:disabled {
-	background-color: #2C2D32;
+	background-color: #303239;
 	color: grey;
 }
 SequenceEdit QPushButton:hover, ShortcutSettingsPage QPushButton:hover, GameSelector QPushButton:hover {
