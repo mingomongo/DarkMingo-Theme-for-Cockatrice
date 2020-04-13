@@ -15,18 +15,10 @@ https://doc.qt.io/qt-5/stylesheet-syntax.html */
 */
 
 /* TODO:
-Headers in game replays don't reach full length of list box
-QMainWindow::separator images do not appear on mac
-Mac text too height
-QLineEdit has selected/focus? border
-List item padding
-Mac checkbox text padding
-button padding bigger?
-qlistview border radius on bottom?
+tab definition
+mac element spacing
+Are you sure window buttons
 
-Try on Mac
-	Go through some languages
-	Check at all windows and window sizes
 Name and screenshots
 */
 
@@ -50,13 +42,15 @@ BUGS:
 * Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
 unless you change theme a lot. Seems to be linked to QWidget?
 * Headers in shortcut menu change when hovered
+* Headers in server replay storage don't color the empty header that should fit the rest of the way
+* QMainWindow::separator images do not appear on mac
 */
 
 /* NOTE: Overall*/
 QWidget, QLabel {
 	background-color: #202225;
 	color: white;
-	font-family: "Segoe UI", Helvetica, sans-serif;
+	font-family: "Segoe UI", "San Francisco", sans-serif;
 	font-size: 12px;
 }
 QLabel {
@@ -254,11 +248,11 @@ QHeaderView::up-arrow {
 QHeaderView::down-arrow {
 	image: url("icons/sortarrowdown.png");
 }
-/* rooms, replays and server lists */
+/* Server list */
 TabServer QHeaderView::section {
 	min-width: 80px;
 }
-/* Set list */
+/* Sets list */
 WndSets QHeaderView::section {
 	min-width: 50px;
 }
@@ -379,15 +373,16 @@ QDockWidget#playerListDock QTreeWidget::item:selected {
 /* NOTE: Tabs */
 QTabBar {
 	font-size: 13px;
-	margin-top: 3px;
+	margin-top: 2px;
 }
 QTabBar::tab {
    background-color: #41444B;
 	border: 1px solid #41444B;
 	border-bottom: 0;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	padding: 2px 9px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 0 9px;
+	padding-bottom: 2px;
 }
 QTabBar::tab:hover {
    background-color: #53575f;
@@ -396,6 +391,9 @@ QTabBar::tab:selected {
 	background-color: #303239;
 	border: 1px solid #7bc5ea;
 	border-bottom: 0;
+}
+QTabBar::tab:!selected {
+	margin-top: 1px;
 }
 
 QTabBar::close-button {
