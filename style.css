@@ -15,6 +15,9 @@ https://doc.qt.io/qt-5/stylesheet-syntax.html */
 */
 
 /* TODO:
+Headers in game replays don't reach full length of list box
+QMainWindow::separator images do not appear on mac
+certain boxes are grey on mac (replays, card sources)
 Try on Mac
 	Go through some languages
 	Check at all windows and window sizes
@@ -41,8 +44,6 @@ BUGS:
 * Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
 unless you change theme a lot. Seems to be linked to QWidget?
 * Headers in shortcut menu change when hovered
-* Headers in game replays don't reach full length of list box
-* QMainWindow::separator images do not appear on mac
 */
 
 /* NOTE: Overall*/
@@ -53,6 +54,10 @@ QWidget, QLabel {
 	font-size: 12px;
 }
 QLabel {
+	background-color: transparent;
+}
+/* NOTE: Mac only fix */
+QToolBar {
 	background-color: transparent;
 }
 
@@ -259,7 +264,7 @@ QDockWidget {
 	titlebar-close-icon: url("icons/dock_close.svg");
    titlebar-normal-icon: url("icons/dock_float.svg");
 }
-QDockWidget::close-button, QHeaderView::float-button {
+QDockWidget::close-button, QDockWidget::float-button {
 	icon-size: 10px;
 }
 QDockWidget::close-button:hover, QDockWidget::float-button:hover {
