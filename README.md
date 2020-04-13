@@ -8,12 +8,12 @@ BEFORE DOWNLOADING: Mac users will experience a pattern of 3 lines over the righ
 There is also one button I cannot change. *sigh.*
 
 
-I've done all I can to minimize these glitches.
+I've done all I can to minimize these glitches, but they should be expected.
 
--Link-
+https://github.com/mingomongo/DarkMingo-Theme-for-Cockatrice/releases
 
 ## Installation
-Create this directory if it doesn't exist.<br>
+Create the directory if it doesn't exist.<br>
 * Windows: C:\Users\USERNAME\AppData\Local\Cockatrice\Cockatrice\themes
 * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
 * Mac OSX: ~/Library/Application Support/Cockatrice/Cockatrice/themes
