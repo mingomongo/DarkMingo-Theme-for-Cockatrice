@@ -17,7 +17,13 @@ https://doc.qt.io/qt-5/stylesheet-syntax.html */
 /* TODO:
 Headers in game replays don't reach full length of list box
 QMainWindow::separator images do not appear on mac
-certain boxes are grey on mac (replays, card sources)
+Mac text too height
+QLineEdit has selected/focus? border
+List item padding
+Mac checkbox text padding
+button padding bigger?
+qlistview border radius on bottom?
+
 Try on Mac
 	Go through some languages
 	Check at all windows and window sizes
@@ -56,9 +62,11 @@ QWidget, QLabel {
 QLabel {
 	background-color: transparent;
 }
-/* NOTE: Mac only fix */
+/* NOTE: Fix for macs */
 QToolBar {
-	background-color: transparent;
+	border-radius: 2px;
+	background: transparent;
+	padding: 1px;
 }
 
 /* NOTE: I hate this thing */
@@ -155,14 +163,19 @@ DlgSettings > QStackedWidget {
 	border-radius: 2px;
 }
 
-QComboBox, QLineEdit, LineEditCompleter, .QTextEdit, QSpinBox {
+.QTextEdit {
 	background-color: #41444B;
 	border-radius: 2px;
 	color: white;
-	padding: 1px;
+	padding-left: 1px;
 }
-QLineEdit {
-	padding: 2px;
+
+QComboBox, QLineEdit, LineEditCompleter, QSpinBox {
+	background-color: #41444B;
+	border-radius: 2px;
+	color: white;
+	padding-left: 3px;
+	height: 20px;
 }
 QLineEdit:read-only {
 	background-color: transparent;
@@ -174,8 +187,9 @@ QLineEdit::close {
 	image: url("icons/branch_closed.svg");
 }
 
-QComboBox {
-	padding-left: 3px;
+/* NOTE: Dropdown lists and number boxes */
+QComboBox, QSpinBox {
+	max-width: 400px;
 }
 QComboBox:hover {
 	background-color: #53575f;
@@ -184,6 +198,17 @@ QComboBox::drop-down {
    image: url("icons/dropdown.svg");
 	right: 3px;
 	top: 3px;
+}
+QSpinBox::up-button {
+	height: 10px;
+	image: url("icons/spin_up.svg");
+}
+QSpinBox::down-button {
+	height: 10px;
+	image: url("icons/spin_down.svg");
+}
+QSpinBox::up-button:hover, QSpinBox::up-button:pressed, QSpinBox::down-button:hover, QSpinBox::down-button:pressed {
+	background-color: #53575f;
 }
 
 /* NOTE: Combobox menu colour */
@@ -200,24 +225,6 @@ LineEditCompleter {
 /* NOTE: I don't know how to select this so that it works with other languages, sorry */
 QLabel[text="&Say:"] {
 	margin-bottom: 4px;
-}
-
-/* NOTE: Number boxes */
-QSpinBox {
-	min-width: 28px;
-	padding-left: 2px;
-}
-QSpinBox::up-button {
-	height: 9px;
-	image: url("icons/spin_up.svg");
-}
-QSpinBox::down-button {
-	height: 9px;
-	image: url("icons/spin_down.svg");
-	margin-top: 1px;
-}
-QSpinBox::up-button:hover, QSpinBox::up-button:pressed, QSpinBox::down-button:hover, QSpinBox::down-button:pressed {
-	background-color: #53575f;
 }
 
 /* NOTE: List headers */
@@ -276,10 +283,6 @@ QDockWidget::title {
 	margin: 3px;
 	padding: 3px 0;
 }
-QDockWidget#playerListDock QTreeWidget::item:selected {
-	background-color: transparent;
-	color: white;
-}
 QMainWindow::separator:horizontal {
 	height: 5px;
 	image: url("icons/docksplit_horizontal.png");
@@ -293,9 +296,7 @@ QTreeView {
 	border-radius: 4px;
 }
 QTreeView::item {
-	padding-bottom: 1px;
-	padding-left: 1px;
-	padding-top: 1px;
+	height: 19px;
 }
 QTreeView::indicator:checked {
 	image: url(icons/treecheckbox_checked.svg);
@@ -316,9 +317,7 @@ QTreeView::item:hover, DlgSettings QTreeView::item:hover, QTreeView#deckView::it
 	border: 1px solid #7bc5ea;
 	border-left: none;
    border-right: none;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-top: 0;
+	padding-top: -1px;
 }
 QTreeView::item:selected, QTreeView#deckView::item:selected, QTreeView#filterView::item:selected {
 	background: #B8DEF2;
@@ -332,7 +331,6 @@ QTreeView::item:has-children, QTreeView#deckView::item:has-children, QTreeView#f
 	color: black;
 }
 
-/* hover with border glitches everything out */
 TabDeckStorage QTreeView::item:has-children:hover, TabReplays QTreeView::item:has-children:hover {
 	border: 1px solid #7bc5ea;
 	border-left: none;
@@ -357,7 +355,6 @@ TabDeckStorage QTreeView::item:has-children, TabReplays QTreeView::item:has-chil
 	color: white;
 }
 
-
 /* NOTE: Bg image */
 QTreeView#deckView {
 	background-attachment: fixed;
@@ -374,22 +371,23 @@ UserList QTreeWidget {
 UserList QHeaderView:section {
 	min-width: 0;
 }
+QDockWidget#playerListDock QTreeWidget::item:selected {
+	background-color: transparent;
+	color: white;
+}
 
 /* NOTE: Tabs */
 QTabBar {
 	font-size: 13px;
-	padding-top: 3px;
+	margin-top: 3px;
 }
 QTabBar::tab {
    background-color: #41444B;
-	border: 1px solid grey;
+	border: 1px solid #41444B;
 	border-bottom: 0;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	min-height: 16px;
-	padding-bottom: 3px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 2px 9px;
 }
 QTabBar::tab:hover {
    background-color: #53575f;
@@ -398,21 +396,8 @@ QTabBar::tab:selected {
 	background-color: #303239;
 	border: 1px solid #7bc5ea;
 	border-bottom: 0;
-	margin-left: -3px;
-	margin-right: -3px;
 }
-QTabBar::tab:!selected {
-   margin-top: 2px;
-}
-QTabBar::tab:first:selected {
-   margin-left: 0;
-}
-QTabBar::tab:last:selected {
-   margin-right: 0;
-}
-QTabBar::tab:only-one {
-   margin: 0;
-}
+
 QTabBar::close-button {
 	image: url(icons/close_tab.svg);
 }
@@ -537,7 +522,7 @@ QPushButton {
 	border-radius: 2px;
 	color: black;
 	font-size: 12px;
-	padding: 3px 5px;
+	height: 21px;
 }
 QPushButton:disabled {
 	background-color: #303239;
@@ -550,7 +535,6 @@ QToolButton, QPushButton#ok {
 	color: white;
 	font-size: 12px;
 	min-width: 24px;
-	padding: 2px 0;
 }
 QToolButton:disabled {
 	color: grey;
@@ -563,6 +547,7 @@ QToolButton#filterDelOne, QToolButton#filterDelAll {
 SequenceEdit QPushButton, ShortcutSettingsPage QPushButton, GameSelector QPushButton {
 	background-color: #303239;
 	color: white;
+	padding: 0 4px;
 }
 SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled, GameSelector QPushButton:disabled {
 	background-color: #303239;
@@ -580,14 +565,20 @@ QPushButton:hover {
 }
 DlgSettings QPushButton {
 	max-width: 200px;
-	min-width: 40px;
+	min-width: 50px;
+}
+DlgConnect QPushButton {
+	padding: 0 4px;
 }
 /* NOTE: Buttons on popups */
-QMessageBox QPushButton, QMessageBox::DefaultButton {
-  min-width: 70px;
+QMessageBox QPushButton {
+  min-width: 50px;
 }
 
 /* NOTE: Check boxes and radio buttons */
+QCheckBox, QRadioButton {
+	spacing: 6px;
+}
 QCheckBox::indicator:unchecked {
    image: url(icons/checkbox_unchecked.svg);
 }
