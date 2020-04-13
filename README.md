@@ -17,7 +17,6 @@ Create the directory if it doesn't exist.<br>
 * Windows: C:\Users\USERNAME\AppData\Local\Cockatrice\Cockatrice\themes
 * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
 * Mac OSX: ~/Library/Application Support/Cockatrice/Cockatrice/themes
-<br>
 
 ## Bugs and stuff for future themers
 
