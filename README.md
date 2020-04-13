@@ -12,12 +12,12 @@ There is also one button I cannot change. *sigh.* I've done all I can to minimiz
 Also, if you're interested in editing this theme, [here](https://drive.google.com/open?id=1I2JmUKKwJwR0RJyn8lmG499Te9ulrAyH) are the Illustrator and Photoshop I used to create the graphics.
 
 ## Installation
-Create the directory if it doesn't exist.<br>
+Create the directory if it doesn't exist and drag the zip folder inside.<br>
 * Windows: C:\Users\USERNAME\AppData\Local\Cockatrice\Cockatrice\themes
 * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
 * Mac OSX: ~/Library/Application Support/Cockatrice/Cockatrice/themes
-
-Unzip the downloaded folder inside, then go to Settings > Appearance on Cockatrice, then select the theme from the dropdown.
+After, unzip the folder then drag the first folder out. Essentially, you want the folder order to be: /themes/DarkMingo-Theme-for-Cockatrice-1.0/ then the contents. If there's another folder inbetween the theme won't work.<br>
+Then go to Settings > Appearance on Cockatrice, then select the theme from the dropdown, then restart Cockatrice to get everything showing how it should.
 
 ## Bugs and stuff for future themers
 
