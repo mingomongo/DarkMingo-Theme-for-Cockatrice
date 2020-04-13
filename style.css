@@ -15,10 +15,7 @@ https://doc.qt.io/qt-5/stylesheet-syntax.html */
 */
 
 /* TODO:
-tab definition
-mac element spacing
 Are you sure window buttons
-
 Name and screenshots
 */
 
@@ -163,7 +160,6 @@ DlgSettings > QStackedWidget {
 	color: white;
 	padding-left: 1px;
 }
-
 QComboBox, QLineEdit, LineEditCompleter, QSpinBox {
 	background-color: #41444B;
 	border-radius: 2px;
@@ -312,6 +308,9 @@ QTreeView::item:hover, DlgSettings QTreeView::item:hover, QTreeView#deckView::it
 	border-left: none;
    border-right: none;
 	padding-top: -1px;
+}
+QTreeView#deckView::item:hover, QTreeView#filterView::item:hover {
+	padding-top: 0;
 }
 QTreeView::item:selected, QTreeView#deckView::item:selected, QTreeView#filterView::item:selected {
 	background: #B8DEF2;
@@ -521,6 +520,7 @@ QPushButton {
 	color: black;
 	font-size: 12px;
 	height: 21px;
+	padding: 0 4px;
 }
 QPushButton:disabled {
 	background-color: #303239;
@@ -545,7 +545,6 @@ QToolButton#filterDelOne, QToolButton#filterDelAll {
 SequenceEdit QPushButton, ShortcutSettingsPage QPushButton, GameSelector QPushButton {
 	background-color: #303239;
 	color: white;
-	padding: 0 4px;
 }
 SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled, GameSelector QPushButton:disabled {
 	background-color: #303239;
@@ -565,12 +564,9 @@ DlgSettings QPushButton {
 	max-width: 200px;
 	min-width: 50px;
 }
-DlgConnect QPushButton {
-	padding: 0 4px;
-}
 /* NOTE: Buttons on popups */
 QMessageBox QPushButton {
-  min-width: 50px;
+  min-width: 70px;
 }
 
 /* NOTE: Check boxes and radio buttons */
