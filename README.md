@@ -3,7 +3,7 @@ Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "
 
 Screenshots: https://imgur.com/a/iOopO1R
 
-## Download:
+## Download
 BEFORE DOWNLOADING: Mac users will experience a pattern of 3 lines over the right of the deck editor (https://imgur.com/a/Xus6zi2), this is a known issue and seems to happen with all mac themes. Additionally, all platforms will experience some alignment issues with lists and their headers, this is unfortunately not fixable with the theme due to Cockatrice's code.
 There is also one button I cannot change. *sigh.*
 
@@ -12,13 +12,16 @@ I've done all I can to minimize these glitches.
 
 -Link-
 
-## Installation:
+## Installation
 Create this directory if it doesn't exist.<br>
 * Windows: C:\Users\USERNAME\AppData\Local\Cockatrice\Cockatrice\themes
 * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
 * Mac OSX: ~/Library/Application Support/Cockatrice/Cockatrice/themes
+<br>
 
-## Bugs:
+## Bugs and stuff for future themers
+
+### Bugs
 * Mac: 3 lines appear on top of the deck editor when QWidget's color property is changed
 * Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
 unless you change theme a lot. Seems to be linked to QWidget?
@@ -27,7 +30,6 @@ unless you change theme a lot. Seems to be linked to QWidget?
 * Mac: QMainWindow::separator images do not appear
 * Middle-click card info has the ugly QFrame style with sharp edges, not sure how to change it.
 
-## For coders
 ### Unchangeable by CSS
 * ChatView's alternating row colors
 * QTreeView's "has:children" items are locked for font weight and font size
