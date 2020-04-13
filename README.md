@@ -4,13 +4,12 @@ Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "
 Screenshots: https://imgur.com/a/iOopO1R
 
 ## Download
-BEFORE DOWNLOADING: Mac users will experience a pattern of 3 lines over the right of the deck editor (https://imgur.com/a/Xus6zi2), this is a known issue and seems to happen with all mac themes. Additionally, all platforms will experience some alignment issues with lists and their headers, this is unfortunately not fixable with the theme due to Cockatrice's code.
-There is also one button I cannot change. *sigh.*
+**BEFORE DOWNLOADING**: Mac users will experience a pattern of 3 lines over the right of the deck editor (https://imgur.com/a/Xus6zi2), this is a known issue and seems to happen with all mac themes. Additionally, all platforms will experience some alignment issues with lists and their headers, this is unfortunately not fixable with the theme due to Cockatrice's code.
+There is also one button I cannot change. *sigh.* I've done all I can to minimize these glitches, but they should be expected.
 
+[Download, read above first!](https://github.com/mingomongo/DarkMingo-Theme-for-Cockatrice/releases)
 
-I've done all I can to minimize these glitches, but they should be expected.
-
-https://github.com/mingomongo/DarkMingo-Theme-for-Cockatrice/releases
+Also, if you're interested in editing this theme, [here](https://drive.google.com/open?id=1I2JmUKKwJwR0RJyn8lmG499Te9ulrAyH) are the Illustrator and Photoshop I used to create the graphics.
 
 ## Installation
 Create the directory if it doesn't exist.<br>
