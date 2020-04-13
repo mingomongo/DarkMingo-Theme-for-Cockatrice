@@ -4,8 +4,8 @@ https://doc.qt.io/qt-5/stylesheet-reference.html
 https://doc.qt.io/qt-5/stylesheet-syntax.html */
 
 /* Color Scheme:
-	White: #fcfcfc
-	Alternate White: #ebebeb
+	White: #F2F2F5
+	Alternate White: #DFDFE3
 	"Black": #202225
 	Dark Grey: #303239
 	Grey: #41444B
@@ -33,7 +33,7 @@ QToolBar {
 
 /* NOTE: I hate this thing */
 ChatView {
-	background-color: #fcfcfc;
+	background-color: #F2F2F5;
 	border: 0;
 	color: black;
 }
@@ -42,7 +42,7 @@ QTextEdit {
 }
 /* NOTE: Server info box */
 TabServer QTextBrowser {
-	background-color: #fcfcfc;
+	background-color: #F2F2F5;
 	border-radius: 3px;
 	color: black;
 }
@@ -329,8 +329,8 @@ QTreeView#deckView {
 }
 
 UserList QTreeWidget {
-	alternate-background-color: #ebebeb;
-	background-color: #fcfcfc;
+	alternate-background-color: #DFDFE3;
+	background-color: #F2F2F5;
 }
 UserList QHeaderView:section {
 	min-width: 0;
