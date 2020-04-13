@@ -41,6 +41,8 @@ BUGS:
 * Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
 unless you change theme a lot. Seems to be linked to QWidget?
 * Headers in shortcut menu change when hovered
+* Headers in game replays don't reach full length of list box
+* QMainWindow::separator images do not appear on mac
 */
 
 /* NOTE: Overall*/
@@ -256,6 +258,9 @@ QDockWidget {
 	font-weight: bold;
 	titlebar-close-icon: url("icons/dock_close.svg");
    titlebar-normal-icon: url("icons/dock_float.svg");
+}
+QDockWidget::close-button, QHeaderView::float-button {
+	icon-size: 10px;
 }
 QDockWidget::close-button:hover, QDockWidget::float-button:hover {
 	background-color: #41444B;
@@ -527,9 +532,7 @@ QPushButton {
 	border-radius: 2px;
 	color: black;
 	font-size: 12px;
-	padding: 0 5px;
-	padding-top: 2px;
-	padding-bottom: 4px;
+	padding: 3px 5px;
 }
 QPushButton:disabled {
 	background-color: #303239;
@@ -555,7 +558,6 @@ QToolButton#filterDelOne, QToolButton#filterDelAll {
 SequenceEdit QPushButton, ShortcutSettingsPage QPushButton, GameSelector QPushButton {
 	background-color: #303239;
 	color: white;
-	padding: 3px 5px;
 }
 SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled, GameSelector QPushButton:disabled {
 	background-color: #303239;
@@ -564,7 +566,6 @@ SequenceEdit QPushButton:disabled, ShortcutSettingsPage QPushButton:disabled, Ga
 SequenceEdit QPushButton:hover, ShortcutSettingsPage QPushButton:hover, GameSelector QPushButton:hover {
 	background-color: #41444B;
 	color: white;
-	padding: 3px 5px;
 }
 QToolButton:pressed, QToolButton:hover, QPushButton#ok:hover, QToolButton#filterDelOne:hover, QToolButton#filterDelAll:hover {
 	background-color: #41444B;
