@@ -17,6 +17,8 @@ Create the directory if it doesn't exist.<br>
 * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
 * Mac OSX: ~/Library/Application Support/Cockatrice/Cockatrice/themes
 
+Unzip the downloaded folder inside, then go to Settings > Appearance on Cockatrice, then select the theme from the dropdown.
+
 ## Bugs and stuff for future themers
 
 ### Bugs
