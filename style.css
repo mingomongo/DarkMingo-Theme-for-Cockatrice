@@ -1,4 +1,4 @@
-/* Use these links and save a lot of time:
+/* If you're editing this thanks for using my skin! If you're new to CSS+QT don't be like me, use these links and save a lot of time:
 https://doc.qt.io/qt-5/stylesheet-examples.html
 https://doc.qt.io/qt-5/stylesheet-reference.html
 https://doc.qt.io/qt-5/stylesheet-syntax.html */
@@ -12,35 +12,6 @@ https://doc.qt.io/qt-5/stylesheet-syntax.html */
 	Hover (varies): #53575f
 	Blue: #7bc5ea
 	Selection blue: #B8DEF2
-*/
-
-/* TODO:
-Are you sure window buttons
-Name and screenshots
-*/
-
-/* NOTE: Unchangeable/known bugs
-ChatView alternating colors (QPalette)
-QTreeView has it's "has:children" items has locked font weight and font size (QFont)
-QHeaderView's single-side borders and :selected are broken, icons customisation is very limited (???)
-QComboBox dropdown border-radius, this might not be an option with this widget though (?)
-Hyperlink colors (QPalette)
-Scaling the Cockatrice logo with the QTreeView (can't do on stylesheet)
-UserList has black text not white
-Tab pane?
-Server online icon
-Any icon that isn't saved locally
-If two buttons are after the same file you can't make one of them have a different icon.
-The list of "settings" icon container height
-Middle-click card info has the ugly QFrame style with sharp edges, cba to change it
-QLineEdit clear button has no property to change it.
-
-BUGS:
-* Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
-unless you change theme a lot. Seems to be linked to QWidget?
-* Headers in shortcut menu change when hovered
-* Headers in server replay storage don't color the empty header that should fit the rest of the way
-* QMainWindow::separator images do not appear on mac
 */
 
 /* NOTE: Overall*/
