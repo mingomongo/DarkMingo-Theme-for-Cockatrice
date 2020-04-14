@@ -31,6 +31,7 @@ unless you change theme a lot. Seems to be linked to QWidget?
 * Middle-click card info has the ugly QFrame style with sharp edges, not sure how to change it.
 
 ### Unchangeable by CSS
+* The glow on active phase buttons and battlefields
 * ChatView's alternating row colors
 * QTreeView's "has:children" items are locked for font weight and font size
 * QHeaderView's single-side borders and :selected are broken, icons customisation is very limited (???)
