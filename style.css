@@ -256,7 +256,7 @@ QTreeView {
 	border: 0;
 	border-radius: 4px;
 }
-QTreeView::item {
+TabRoom QTreeView::item {
 	color: white;
 	font-family: "Segoe UI", "San Francisco", sans-serif;
 	height: 19px;
@@ -328,6 +328,11 @@ QTreeView#deckView {
 	background-image: url(icons/cockatrice_logo.svg);
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+TabUserLists UserList QTreeWidget {
+	alternate-background-color: #DFDFE3;
+	background-color: #F2F2F5;
 }
 
 UserList QHeaderView:section {
