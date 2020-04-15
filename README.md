@@ -37,7 +37,6 @@ unless you change theme a lot. Seems to be linked to QWidget?
 * QHeaderView's single-side borders and :selected are broken, icons customisation is very limited (???)
 * Hyperlink colors
 * Scaling the Cockatrice logo with the QTreeView
-* UserList's black text
 * Server online icon
 * Any icon that isn't saved locally
 * If two buttons are after the same file you can't make one of them have a different icon.
