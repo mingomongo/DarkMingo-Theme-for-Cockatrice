@@ -257,6 +257,8 @@ QTreeView {
 	border-radius: 4px;
 }
 QTreeView::item {
+	color: white;
+	font-family: "Segoe UI", "San Francisco", sans-serif;
 	height: 19px;
 }
 QTreeView::indicator:checked {
@@ -328,10 +330,6 @@ QTreeView#deckView {
 	background-repeat: no-repeat;
 }
 
-UserList QTreeWidget {
-	alternate-background-color: #DFDFE3;
-	background-color: #F2F2F5;
-}
 UserList QHeaderView:section {
 	min-width: 0;
 }
