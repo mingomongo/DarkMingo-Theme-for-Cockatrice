@@ -1,5 +1,5 @@
 # MingoMongo's "DarkMingo" Theme for Cockatrice
-Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "Dark Modes", modern graphic design, and my disbelief that Cockatrice's default theme was so... default. I made a lot of compromises making this but I think you'll enjoy it just the same! Thanks to Artemis' MTGO Theme and Ahzmund's Tabletop Theme for giving me a great place to start and lending some resources!
+Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "Dark Modes", modern graphic design, and my disbelief that Cockatrice's default theme was so... default. I made a lot of compromises making this but I think you'll enjoy it just the same! Thanks to Artemis' MTGO Theme and Ahzmund's Tabletop Theme for giving me a great place to start and lending some resources! I would also like to apologise that this isn't entirely "dark", but the chat and plaer systems have non-adjustable colours means some backgrounds have to be light :(
 
 Screenshots: https://imgur.com/a/iOopO1R
 
@@ -31,12 +31,12 @@ unless you change theme a lot. Seems to be linked to QWidget?
 * Middle-click card info has the ugly QFrame style with sharp edges, not sure how to change it.
 
 ### Unchangeable by CSS
+* The glow on active phase buttons and battlefields
 * ChatView's alternating row colors
 * QTreeView's "has:children" items are locked for font weight and font size
 * QHeaderView's single-side borders and :selected are broken, icons customisation is very limited (???)
 * Hyperlink colors
 * Scaling the Cockatrice logo with the QTreeView
-* UserList's black text
 * Server online icon
 * Any icon that isn't saved locally
 * If two buttons are after the same file you can't make one of them have a different icon.
