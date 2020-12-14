@@ -346,7 +346,7 @@ QDockWidget#playerListDock QTreeWidget::item:selected {
 /* NOTE: Tabs */
 QTabBar {
 	font-size: 13px;
-	margin-top: 2px;
+	margin-top: 10px;
 }
 QTabBar::tab {
    background-color: #41444B;
@@ -356,17 +356,19 @@ QTabBar::tab {
 	border-top-right-radius: 4px;
 	padding: 0 9px;
 	padding-bottom: 2px;
+	padding-top: 2px;
+	margin-right: 5px;
 }
 QTabBar::tab:hover {
    background-color: #53575f;
 }
 QTabBar::tab:selected {
 	background-color: #303239;
-	border: 1px solid #7bc5ea;
 	border-bottom: 0;
+	margin-top:1px;
 }
 QTabBar::tab:!selected {
-	margin-top: 1px;
+	margin-top: 6px;
 }
 
 QTabBar::close-button {
@@ -431,7 +433,7 @@ QMenuBar {
 	font-size: 13px;
 }
 QMenuBar::item {
-	margin-right: 2px;
+	margin-right: 10px;
 	padding-bottom: 2px;
 	padding-left: 4px;
 	padding-right: 3px;
