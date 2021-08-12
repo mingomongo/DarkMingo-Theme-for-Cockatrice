@@ -1,5 +1,5 @@
 # MingoMongo's "DarkMingo" Theme for Cockatrice
-Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "Dark Modes", modern graphic design, and my disbelief that Cockatrice's default theme was so... default. I made a lot of compromises making this but I think you'll enjoy it just the same! Thanks to Artemis' MTGO Theme and Ahzmund's Tabletop Theme for giving me a great place to start and lending some resources! I would also like to apologise that this isn't entirely "dark", but the chat and plaer systems have non-adjustable colours means some backgrounds have to be light :(
+Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "Dark Modes", modern graphic design, and my disbelief that Cockatrice's default theme was so... default. I made a lot of compromises making this but I think you'll enjoy it just the same! Thanks to Artemis' MTGO Theme and Ahzmund's Tabletop Theme for giving me a great place to start and lending some resources! I would also like to apologise and let you know that this theme isn't entirely dark. Unfortunately, the chat, hyperlinks, and some other sections have non-adjustable font colours meaning any dark coloured background obscures important text. :(
 
 Screenshots: https://imgur.com/a/iOopO1R
 
