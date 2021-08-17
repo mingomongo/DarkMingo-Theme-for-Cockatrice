@@ -9,25 +9,24 @@ There is also one button I cannot change. *sigh.* I've done all I can to minimiz
 
 [Download, read above first!](https://github.com/mingomongo/DarkMingo-Theme-for-Cockatrice/releases)
 
-Also, if you're interested in editing this theme, [here](https://drive.google.com/open?id=1I2JmUKKwJwR0RJyn8lmG499Te9ulrAyH) are the Illustrator and Photoshop I used to create the graphics.
+Also, if you're interested in editing this theme, [here](https://drive.google.com/open?id=1I2JmUKKwJwR0RJyn8lmG499Te9ulrAyH) are the Illustrator and Photoshop files which I made the graphics on.
 
 ## Installation
 * Download the Source Code zip from above and drag it to the correct directory below. If you haven't installed a theme before the "themes" folder won't exist, so create it!.<br>
   * Windows: C:\Users\USERNAME\AppData\Local\Cockatrice\Cockatrice\themes<br>(if you've never tried to get to AppData before, learn how [here](https://answersdrive.com/where-do-i-find-appdata-in-windows-10-493170))
   * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
   * MacOS: ~/Users/username/Library (this is a hidden folder)/Application Support/Cockatrice/Cockatrice/themes
-* After, unzip the folder then drag the first folder out. Essentially, you want the folder order to be: /themes/DarkMingo-Theme-for-Cockatrice-1.0/ then all the contents. If there's another folder inbetween the theme won't work.
+* After, unzip the folder then drag the first folder out. Essentially, you want the folder order to be: /themes/DarkMingo-Theme-for-Cockatrice-X.X/ then all the contents. If there's another folder inbetween the theme won't work.
 * Then go to Settings > Appearance on Cockatrice, then select the theme from the dropdown, then restart Cockatrice to get everything showing how it should.
 
 ## Bugs and stuff for future themers
 
 ### Bugs
 * Mac: 3 lines appear on top of the deck editor when QWidget's color property is changed
-* Space at bottom of theme combobox dropdown and only on that dropdown, doesn't matter
-unless you change theme a lot. Seems to be linked to QWidget?
+* There's a space at the bottom of the theme combobox dropdown and only on that dropdown, it's linked to font size and I haven't figured out how to change QAbstractItemView::item size.
 * Headers in shortcut menu change when hovered
 * Headers in server replay storage don't color the empty header that should fit the rest of the way
-* Mac: QMainWindow::separator images do not appear
+* Mac: QMainWindow::separator images do not appear (the elipses showing you can resize different sections)
 * Middle-click card info has the ugly QFrame style with sharp edges, not sure how to change it.
 
 ### Unchangeable by CSS
