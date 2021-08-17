@@ -1,5 +1,5 @@
 # MingoMongo's "DarkMingo" Theme for Cockatrice
-Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "Dark Modes", modern graphic design, and my disbelief that Cockatrice's default theme was so... default. I made a lot of compromises making this but I think you'll enjoy it just the same! Thanks to Artemis' MTGO Theme and Ahzmund's Tabletop Theme for giving me a great place to start and lending some resources! I would also like to apologise that this isn't entirely "dark", but the chat and plaer systems have non-adjustable colours means some backgrounds have to be light :(
+Hi! I'm MingoMongo. Here's a theme I made for Cockatrice born from my love for "Dark Modes", modern graphic design, and my disbelief that Cockatrice's default theme was so... default. I made a lot of compromises making this but I think you'll enjoy it just the same! Thanks to Artemis' MTGO Theme and Ahzmund's Tabletop Theme for giving me a great place to start and lending some resources! I would also like to apologise and let you know that this theme isn't entirely dark. Unfortunately, the chat, hyperlinks, and some other sections have non-adjustable font colours meaning any dark coloured background obscures important text. :(
 
 Screenshots: https://imgur.com/a/iOopO1R
 
@@ -15,7 +15,7 @@ Also, if you're interested in editing this theme, [here](https://drive.google.co
 * Download the Source Code zip from above and drag it to the correct directory below. If you haven't installed a theme before the "themes" folder won't exist, so create it!.<br>
   * Windows: C:\Users\USERNAME\AppData\Local\Cockatrice\Cockatrice\themes<br>(if you've never tried to get to AppData before, learn how [here](https://answersdrive.com/where-do-i-find-appdata-in-windows-10-493170))
   * Linux: ~/.local/share/Cockatrice/Cockatrice/themes
-  * Mac OSX: ~/Library/Application Support/Cockatrice/Cockatrice/themes
+  * MacOS: ~/Users/username/Library (this is a hidden folder)/Application Support/Cockatrice/Cockatrice/themes
 * After, unzip the folder then drag the first folder out. Essentially, you want the folder order to be: /themes/DarkMingo-Theme-for-Cockatrice-1.0/ then all the contents. If there's another folder inbetween the theme won't work.
 * Then go to Settings > Appearance on Cockatrice, then select the theme from the dropdown, then restart Cockatrice to get everything showing how it should.
 
