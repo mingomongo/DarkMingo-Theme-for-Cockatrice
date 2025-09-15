@@ -115,7 +115,7 @@ DlgSettings > QListWidget::item {
 	border-radius: 4px;
 	color: #7bc5ea;
 	icon-size: 30px;
-	min-width: 90%;
+	min-width: 85%;
 	padding: 0;
 	padding-bottom: 3px;
 	width: auto;
